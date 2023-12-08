@@ -16,7 +16,10 @@ import (
 func main() {
 	log.SetFlags(log.Lshortfile | log.LstdFlags)
 	start_time := time.Now().UnixMicro()
-	client, err := ethclient.Dial(helper.PolygonRPC)
+	// client, err := ethclient.Dial(helper.PolygonRPC)
+	//client, err := ethclient.Dial("wss://polygon-bor.publicnode.com")
+	//127.0.0.1:8545
+	client, err := ethclient.Dial("http://127.0.0.1:8545")
 	if err != nil {
 		panic(err)
 	}
